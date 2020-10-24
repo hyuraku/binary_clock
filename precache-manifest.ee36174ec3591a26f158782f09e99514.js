@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "34da313ba886febf2e9508ffea08194d",
+    "revision": "dc47f9179c44089e2f34d30e419b1f99",
     "url": "/binary_clock/index.html"
   },
   {
-    "revision": "7374bbf1cbd9db886926",
+    "revision": "49590b39e8f1b057b380",
     "url": "/binary_clock/static/css/main.6d3c34af.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/binary_clock/static/js/2.7351968e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7374bbf1cbd9db886926",
-    "url": "/binary_clock/static/js/main.57472936.chunk.js"
+    "revision": "49590b39e8f1b057b380",
+    "url": "/binary_clock/static/js/main.6bc68b5d.chunk.js"
   },
   {
     "revision": "a3cc3b9c75b9e3c23475",
