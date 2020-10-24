@@ -15,32 +15,32 @@ const Clock = () => {
     }
   }, [])
 
-  const current_hours = dateTime.getHours()
-  const hours_string = Padding(current_hours)
+  const currentHours = dateTime.getHours()
+  const hoursString = Padding(currentHours, 2)
 
-  const current_minutes = dateTime.getMinutes()
-  const minutes_string = Padding(current_minutes)
+  const currentMinutes = dateTime.getMinutes()
+  const minutesString = Padding(currentMinutes, 2)
 
-  const binary_hours_10 = toBinaryString(hours_string[0]).padStart(2, '0')
-  const binary_hours_1 = toBinaryString(hours_string[1]).padStart(4, '0')
+  const binaryHours10 = Padding(toBinaryString(hoursString[0]), 2)
+  const binaryHours1 = Padding(toBinaryString(hoursString[1]), 4)
 
-  const binary_minutes_10 = toBinaryString(minutes_string[0]).padStart(3, '0')
-  const binary_minutes_1 = toBinaryString(minutes_string[1]).padStart(4, '0')
+  const binaryMinutes10 = Padding(toBinaryString(minutesString[0]), 3)
+  const binaryMinutes1 = Padding(toBinaryString(minutesString[1]), 4)
 
   return (
     <div>
       <div className="BlockArea">
-        <Hour10thPlace value={binary_hours_10} />
-        <Hour1stPlace value={binary_hours_1} />
-        <Minute10thPlace value={binary_minutes_10} />
-        <Minute1stPlace value={binary_minutes_1} />
+        <Hour10thPlace value={binaryHours10} />
+        <Hour1stPlace value={binaryHours1} />
+        <Minute10thPlace value={binaryMinutes10} />
+        <Minute1stPlace value={binaryMinutes1} />
       </div>
     </div>
   )
 }
 
-const Padding = (times) => {
-  return times.toString(10).padStart(2, '0')
+const Padding = (number, start_num) => {
+  return number.toString(10).padStart(start_num, '0')
 }
 
 const toBinaryString = (string) => {
