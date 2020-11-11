@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/binary_clock/static/css/main.15276712.chunk.css",
+    "main.css": "/binary_clock/static/css/main.65a52e93.chunk.css",
     "main.js": "/binary_clock/static/js/main.eca2c7cf.chunk.js",
     "main.js.map": "/binary_clock/static/js/main.eca2c7cf.chunk.js.map",
     "runtime-main.js": "/binary_clock/static/js/runtime-main.53d50b6f.js",
@@ -8,15 +8,15 @@
     "static/js/2.7351968e.chunk.js": "/binary_clock/static/js/2.7351968e.chunk.js",
     "static/js/2.7351968e.chunk.js.map": "/binary_clock/static/js/2.7351968e.chunk.js.map",
     "index.html": "/binary_clock/index.html",
-    "precache-manifest.ebfcdbaee7c9c5f97bd37d6565b94d13.js": "/binary_clock/precache-manifest.ebfcdbaee7c9c5f97bd37d6565b94d13.js",
+    "precache-manifest.212d26f7c4205baabea2952acdd50ca1.js": "/binary_clock/precache-manifest.212d26f7c4205baabea2952acdd50ca1.js",
     "service-worker.js": "/binary_clock/service-worker.js",
-    "static/css/main.15276712.chunk.css.map": "/binary_clock/static/css/main.15276712.chunk.css.map",
+    "static/css/main.65a52e93.chunk.css.map": "/binary_clock/static/css/main.65a52e93.chunk.css.map",
     "static/js/2.7351968e.chunk.js.LICENSE.txt": "/binary_clock/static/js/2.7351968e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53d50b6f.js",
     "static/js/2.7351968e.chunk.js",
-    "static/css/main.15276712.chunk.css",
+    "static/css/main.65a52e93.chunk.css",
     "static/js/main.eca2c7cf.chunk.js"
   ]
 }
