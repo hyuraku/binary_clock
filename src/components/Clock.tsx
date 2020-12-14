@@ -39,8 +39,8 @@ const Clock = () => {
   )
 }
 
-const Padding = (number: string, start_num: number): string => {
-  return number.toString().padStart(start_num, '0')
+const Padding = (string: string, start_num: number): string => {
+  return string.toString().padStart(start_num, '0')
 }
 
 const toBinaryString = (string: string): string => {
