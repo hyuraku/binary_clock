@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { Hour1stPlace } from './Hour1stPlace'
-import { Hour10thPlace } from './Hour10thPlace'
-import { Minute1stPlace } from './Minute1stPlace'
-import { Minute10thPlace } from './Minute10thPlace'
+import { Blocks } from './Blocks'
 
 const Clock = () => {
   const [dateTime, setDateime] = useState(new Date())
@@ -30,10 +27,10 @@ const Clock = () => {
   return (
     <div>
       <div className="BlockArea">
-        <Hour10thPlace value={binaryHours10} />
-        <Hour1stPlace value={binaryHours1} />
-        <Minute10thPlace value={binaryMinutes10} />
-        <Minute1stPlace value={binaryMinutes1} />
+        <Blocks value={binaryHours10} />
+        <Blocks value={binaryHours1} />
+        <Blocks value={binaryMinutes10} />
+        <Blocks value={binaryMinutes1} />
       </div>
     </div>
   )

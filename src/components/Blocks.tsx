@@ -3,18 +3,22 @@ import React from 'react'
 import { Block } from './Block'
 
 type Props = {
-  value: string;
+  value: string
 }
 
-export const Hour1stPlace: React.FC<Props> = (props) => {
+export const Blocks: React.FC<Props> = (props) => {
   const { value } = props
+  const value_arr = value.split('')
+
   const number = parseInt(value, 2)
+
+  const blockList = value_arr.map((value: string) => {
+    return <Block value={value} />
+  })
+
   return (
     <div className="Blocks">
-      <Block value={value[0]} />
-      <Block value={value[1]} />
-      <Block value={value[2]} />
-      <Block value={value[3]} />
+      {blockList}
       <h1>{number}</h1>
     </div>
   )
