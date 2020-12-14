@@ -16,10 +16,10 @@ const Clock = () => {
   }, [])
 
   const currentHours = dateTime.getHours()
-  const hoursString = Padding(currentHours, 2)
+  const hoursString = Padding(currentHours.toString(), 2)
 
   const currentMinutes = dateTime.getMinutes()
-  const minutesString = Padding(currentMinutes, 2)
+  const minutesString = Padding(currentMinutes.toString(), 2)
 
   const binaryHours10 = Padding(toBinaryString(hoursString[0]), 2)
   const binaryHours1 = Padding(toBinaryString(hoursString[1]), 4)
@@ -39,11 +39,11 @@ const Clock = () => {
   )
 }
 
-const Padding = (number, start_num) => {
-  return number.toString(10).padStart(start_num, '0')
+const Padding = (string: string, start_num: number): string => {
+  return string.toString().padStart(start_num, '0')
 }
 
-const toBinaryString = (string) => {
+const toBinaryString = (string: string): string => {
   return parseInt(string).toString(2)
 }
 

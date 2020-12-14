@@ -2,7 +2,11 @@ import React from 'react'
 
 import { Block } from './Block'
 
-export const Minute1stPlace = (props) => {
+type Props = {
+  value: string;
+}
+
+export const Hour1stPlace: React.FC<Props> = (props) => {
   const { value } = props
   const number = parseInt(value, 2)
   return (
