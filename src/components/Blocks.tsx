@@ -6,8 +6,7 @@ type Props = {
   value: string
 }
 
-export const Blocks: React.FC<Props> = (props) => {
-  const { value } = props
+export const Blocks: React.FC<Props> = ({ value }) => {
   const value_arr = value.split('')
 
   const number = parseInt(value, 2)
