@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/binary_clock/static/css/main.d798581c.chunk.css",
-    "main.js": "/binary_clock/static/js/main.fd57f283.chunk.js",
-    "main.js.map": "/binary_clock/static/js/main.fd57f283.chunk.js.map",
-    "runtime-main.js": "/binary_clock/static/js/runtime-main.5814780e.js",
-    "runtime-main.js.map": "/binary_clock/static/js/runtime-main.5814780e.js.map",
-    "static/js/2.d83321d3.chunk.js": "/binary_clock/static/js/2.d83321d3.chunk.js",
-    "static/js/2.d83321d3.chunk.js.map": "/binary_clock/static/js/2.d83321d3.chunk.js.map",
+    "main.js": "/binary_clock/static/js/main.dbc65b28.chunk.js",
+    "main.js.map": "/binary_clock/static/js/main.dbc65b28.chunk.js.map",
+    "runtime-main.js": "/binary_clock/static/js/runtime-main.44481800.js",
+    "runtime-main.js.map": "/binary_clock/static/js/runtime-main.44481800.js.map",
+    "static/js/2.2e012690.chunk.js": "/binary_clock/static/js/2.2e012690.chunk.js",
+    "static/js/2.2e012690.chunk.js.map": "/binary_clock/static/js/2.2e012690.chunk.js.map",
     "index.html": "/binary_clock/index.html",
     "static/css/main.d798581c.chunk.css.map": "/binary_clock/static/css/main.d798581c.chunk.css.map",
-    "static/js/2.d83321d3.chunk.js.LICENSE.txt": "/binary_clock/static/js/2.d83321d3.chunk.js.LICENSE.txt"
+    "static/js/2.2e012690.chunk.js.LICENSE.txt": "/binary_clock/static/js/2.2e012690.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5814780e.js",
-    "static/js/2.d83321d3.chunk.js",
+    "static/js/runtime-main.44481800.js",
+    "static/js/2.2e012690.chunk.js",
     "static/css/main.d798581c.chunk.css",
-    "static/js/main.fd57f283.chunk.js"
+    "static/js/main.dbc65b28.chunk.js"
   ]
 }
