@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { Blocks } from './Blocks'
 
-const Clock = () => {
+const Clock = React.memo(() => {
   const [dateTime, setDateime] = useState(new Date())
 
   useEffect(() => {
@@ -34,7 +34,9 @@ const Clock = () => {
       </div>
     </div>
   )
-}
+})
+
+Clock.displayName = "Clock"
 
 const Padding = (string: string, start_num: number): string => {
   return string.toString().padStart(start_num, '0')
