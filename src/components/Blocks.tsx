@@ -6,7 +6,7 @@ type Props = {
   value: string
 }
 
-export const Blocks: React.FC<Props> = ({ value }) => {
+export const Blocks: React.FC<Props> = React.memo(({ value }) => {
   const value_arr = value.split('')
 
   const number = parseInt(value, 2)
@@ -21,4 +21,6 @@ export const Blocks: React.FC<Props> = ({ value }) => {
       <h1>{number}</h1>
     </div>
   )
-}
+})
+
+Blocks.displayName = "BLocks"
