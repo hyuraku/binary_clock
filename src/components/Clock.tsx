@@ -12,17 +12,20 @@ const Clock = React.memo(() => {
     }
   }, [])
 
-  const currentHours = dateTime.getHours()
-  const hoursString = Padding(currentHours.toString(), 2)
+  const hoursString = Padding(dateTime.getHours().toString(), 2)
 
-  const currentMinutes = dateTime.getMinutes()
-  const minutesString = Padding(currentMinutes.toString(), 2)
+  const minutesString = Padding(dateTime.getMinutes().toString(), 2)
+
+  const secondString = Padding(dateTime.getSeconds().toString(), 2)
 
   const binaryHours10 = Padding(toBinaryString(hoursString[0]), 2)
   const binaryHours1 = Padding(toBinaryString(hoursString[1]), 4)
 
   const binaryMinutes10 = Padding(toBinaryString(minutesString[0]), 3)
   const binaryMinutes1 = Padding(toBinaryString(minutesString[1]), 4)
+
+  const binarySeconds10 = Padding(toBinaryString(secondString[0]), 3)
+  const binarySeconds1 = Padding(toBinaryString(secondString[1]), 4)
 
   return (
     <div>
@@ -31,6 +34,8 @@ const Clock = React.memo(() => {
         <Blocks value={binaryHours1} />
         <Blocks value={binaryMinutes10} />
         <Blocks value={binaryMinutes1} />
+        <Blocks value={binarySeconds10} />
+        <Blocks value={binarySeconds1} />
       </div>
     </div>
   )
