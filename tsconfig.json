@@ -1,6 +1,8 @@
 {
+  "include": ["src", "types"],
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./",
+    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,10 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "noFallthroughCasesInSwitch": true
-  },
-  "include": [
-    "src"
-  ]
+  }
 }
