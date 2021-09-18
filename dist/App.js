@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 import Clock from "./components/Clock.js";
 import "./App.css.proxy.js";
 function App() {

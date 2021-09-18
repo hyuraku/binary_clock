@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "../../_snowpack/pkg/react.js";
+import React, {useState, useEffect} from "../../snowpack/pkg/react.js";
 import {Blocks} from "./Blocks.js";
 const Clock = React.memo(() => {
   const [dateTime, setDateime] = useState(new Date());

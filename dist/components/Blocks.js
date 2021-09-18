@@ -1,4 +1,4 @@
-import React from "../../_snowpack/pkg/react.js";
+import React from "../../snowpack/pkg/react.js";
 import {Block} from "./Block.js";
 export const Blocks = React.memo(({value}) => {
   const value_arr = value.split("");
