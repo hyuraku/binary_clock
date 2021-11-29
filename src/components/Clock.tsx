@@ -13,12 +13,10 @@ const Clock = React.memo(() => {
   }, [])
 
   const hoursString = Padding(dateTime.getHours().toString(), 2)
-
   const minutesString = Padding(dateTime.getMinutes().toString(), 2)
-
   const secondString = Padding(dateTime.getSeconds().toString(), 2)
 
-  const binaryHours10 = Padding(toBinaryString(hoursString[0]), 2)
+  const binaryHours10 = Padding(toBinaryString(hoursString[0]), 3)
   const binaryHours1 = Padding(toBinaryString(hoursString[1]), 4)
 
   const binaryMinutes10 = Padding(toBinaryString(minutesString[0]), 3)
