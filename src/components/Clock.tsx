@@ -10,12 +10,16 @@ const Clock = React.memo(() => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const binaryHours10 = useMemo(() => toBinaryString(dateTime.getHours().toString()[0]).padStart(3, '0'), [dateTime]);
-  const binaryHours1 = useMemo(() => toBinaryString(dateTime.getHours().toString()[1]).padStart(4, '0'), [dateTime]);
-  const binaryMinutes10 = useMemo(() => toBinaryString(dateTime.getMinutes().toString()[0]).padStart(3, '0'), [dateTime]);
-  const binaryMinutes1 = useMemo(() => toBinaryString(dateTime.getMinutes().toString()[1]).padStart(4, '0'), [dateTime]);
-  const binarySeconds10 = useMemo(() => toBinaryString(dateTime.getSeconds().toString()[0]).padStart(3, '0'), [dateTime]);
-  const binarySeconds1 = useMemo(() => toBinaryString(dateTime.getSeconds().toString()[1]).padStart(4, '0'), [dateTime]);
+  const hours = dateTime.getHours().toString().padStart(2, '0');
+  const minutes = dateTime.getMinutes().toString().padStart(2, '0');
+  const seconds = dateTime.getSeconds().toString().padStart(2, '0');
+
+  const binaryHours10 = useMemo(() => toBinaryString(hours[0]).padStart(3, '0'), [dateTime]);
+  const binaryHours1 = useMemo(() => toBinaryString(hours[1]).padStart(4, '0'), [dateTime]);
+  const binaryMinutes10 = useMemo(() => toBinaryString(minutes[0]).padStart(3, '0'), [dateTime]);
+  const binaryMinutes1 = useMemo(() => toBinaryString(minutes[1]).padStart(4, '0'), [dateTime]);
+  const binarySeconds10 = useMemo(() => toBinaryString(seconds[0]).padStart(3, '0'), [dateTime]);
+  const binarySeconds1 = useMemo(() => toBinaryString(seconds[1]).padStart(4, '0'), [dateTime]);
 
   return (
     <div>
