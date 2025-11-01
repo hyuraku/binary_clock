@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react';
 
-import { Blocks } from './Blocks'
+import { Blocks } from './Blocks';
 
 const Clock = React.memo(() => {
-  const [dateTime, setDateime] = useState(new Date())
+  const [dateTime, setDateTime] = useState(new Date());
 
   useEffect(() => {
-    const id = setInterval(() => setDateime(new Date()), 1000)
-    return () => {
-      clearInterval(id)
-    }
-  }, [])
+    const intervalId = setInterval(() => setDateTime(new Date()), 1000);
+    return () => clearInterval(intervalId);
+  }, []);
 
-  const hoursString = Padding(dateTime.getHours().toString(), 2)
-  const minutesString = Padding(dateTime.getMinutes().toString(), 2)
-  const secondString = Padding(dateTime.getSeconds().toString(), 2)
-
-  const binaryHours10 = Padding(toBinaryString(hoursString[0]), 3)
-  const binaryHours1 = Padding(toBinaryString(hoursString[1]), 4)
-
-  const binaryMinutes10 = Padding(toBinaryString(minutesString[0]), 3)
-  const binaryMinutes1 = Padding(toBinaryString(minutesString[1]), 4)
-
-  const binarySeconds10 = Padding(toBinaryString(secondString[0]), 3)
-  const binarySeconds1 = Padding(toBinaryString(secondString[1]), 4)
+  const binaryHours10 = useMemo(() => toBinaryString(dateTime.getHours().toString()[0]).padStart(3, '0'), [dateTime]);
+  const binaryHours1 = useMemo(() => toBinaryString(dateTime.getHours().toString()[1]).padStart(4, '0'), [dateTime]);
+  const binaryMinutes10 = useMemo(() => toBinaryString(dateTime.getMinutes().toString()[0]).padStart(3, '0'), [dateTime]);
+  const binaryMinutes1 = useMemo(() => toBinaryString(dateTime.getMinutes().toString()[1]).padStart(4, '0'), [dateTime]);
+  const binarySeconds10 = useMemo(() => toBinaryString(dateTime.getSeconds().toString()[0]).padStart(3, '0'), [dateTime]);
+  const binarySeconds1 = useMemo(() => toBinaryString(dateTime.getSeconds().toString()[1]).padStart(4, '0'), [dateTime]);
 
   return (
     <div>
@@ -36,17 +28,11 @@ const Clock = React.memo(() => {
         <Blocks value={binarySeconds1} />
       </div>
     </div>
-  )
-})
+  );
+});
 
-Clock.displayName = "Clock"
+Clock.displayName = 'Clock';
 
-const Padding = (string: string, start_num: number): string => {
-  return string.toString().padStart(start_num, '0')
-}
+const toBinaryString = (string: string) => parseInt(string, 10).toString(2);
 
-const toBinaryString = (string: string): string => {
-  return parseInt(string).toString(2)
-}
-
-export default Clock
+export default Clock;

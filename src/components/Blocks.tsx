@@ -1,26 +1,23 @@
-import React from 'react'
+import React, { FC, memo } from 'react';
+import { Block } from './Block';
 
-import { Block } from './Block'
+type BlocksProps = {
+  value: string;
+};
 
-type Props = {
-  value: string
-}
-
-export const Blocks: React.FC<Props> = React.memo(({ value }) => {
-  const value_arr = value.split('')
-
-  const number = parseInt(value, 2)
-
-  const blockList = value_arr.map((value: string) => {
-    return <Block value={value} />
-  })
+export const Blocks: FC<BlocksProps> = memo(({ value }) => {
+  const valueArr = value.split('');
+  const number = parseInt(value, 2);
+  const blockList = valueArr.map((value: string, index: number) => (
+    <Block key={index} value={value} />
+  ));
 
   return (
     <div className="Blocks">
       {blockList}
       <h1>{number}</h1>
     </div>
-  )
-})
+  );
+});
 
-Blocks.displayName = "BLocks"
+Blocks.displayName = 'Blocks';

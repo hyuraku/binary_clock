@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { FC, memo } from 'react';
 
-type Props = {
-  value: string
-}
+type BlockProps = {
+  value: string;
+};
 
-export const Block: React.FC<Props> = React.memo(({ value } ) => {
-  const blockColor = value === '1' ? 'BlackBlock' : 'WhiteBlock'
-  return <div className={blockColor}></div>
-})
+export const Block: FC<BlockProps> = memo(({ value }) => {
+  const blockColor = value === '1' ? 'BlackBlock' : 'WhiteBlock';
+  return <div className={blockColor}></div>;
+});
 
-Block.displayName = "Block"
+Block.displayName = 'Block';
